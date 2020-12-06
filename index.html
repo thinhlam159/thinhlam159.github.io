@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ecommerce-project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <!-- <js src="https://kit.fontawesome.com/d076a05399.js"></js> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<div class="main">
+    <header>
+        <!-- header-1 -->
+        <div class="header-full-width">
+            <!--top-header-->
+            <div class="top-header">
+                <div class="row">
+                    <div class="header-left">
+                        <!-- search-box -->
+                        <div class="wrapper-header-left">
+                            <div class="search-box">
+                                <div class="search-button">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="input-block-level search-query" name="search"
+                                       placeholder="Search" id="search_query" value="" autocomplete="off"
+                                       >
+                            </div>
+                            <!-- currency_form -->
+                            <form action="" id="currency-form">
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">$<i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:;"
+                                               onclick="$('input[name=\'code\']').attr('value', 'EUR'); $('#currency_form').submit();">Euro</a>
+                                        </li>
+                                        <li><a href="javascript:;"
+                                               onclick="$('input[name=\'code\']').attr('value', 'GBP'); $('#currency_form').submit();">Pound
+                                            Sterling</a></li>
+                                        <li><a href="javascript:;"
+                                               onclick="$('input[name=\'code\']').attr('value', 'USD'); $('#currency_form').submit();">US
+                                            Dollar</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <!-- language-form -->
+                            <form action="" id="language-form">
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">English<i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a>English</a>
+                                        </li>
+                                        <li><a>Italian</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- header-center -->
+                    <div class="header-center">
+                        <div class="logo">
+                            <a href="http://fastortheme.com/default/index.php?route=common/home">
+                                <img src="http://fastortheme.com/default/image/catalog/logo_fastor.png"
+                                     title="Your Store" alt="Your Store">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- hearder-right -->
+                    <div class="header-right">
+                        <a href="http://fastortheme.com/default/index.php?route=account/account" class="my-account">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <!-- Cart block -->
+                        <div id="cart-block" class="dropdown">
+                            <div class="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown"
+                                 onclick="window.location.href = 'http://fastortheme.com/default/index.php?route=checkout/cart'">
+                                <a class="cart-count"><span id="total_count">0</span></a>
+                                <i class="cart-icon">
+                                    <img src="img/icon-cart.png" class="cart-icon-standard" alt="">
+                                    <img src="img/icon-cart-hover.png" class="cart-icon-hover" alt="">
+                                </i>
+                                <p><strong id="total_price_ajax"><span id="total_price">$0.00 <i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></span></strong></p>
+                            </div>
+
+                            <div class="dropdown-menu" id="cart_content">
+                                <div id="cart_contents">
+                                    <div class="empty">Your shopping cart is empty!</div>
+                                    <div class="cart-items">
+<!--                                        <div class="cart-item">-->
+<!--                                            <div class="cart-item__row">-->
+<!--                                                <img src="img/products/item1.jpg" alt="a">-->
+<!--                                                <div class="title">Iphone 12 pro max</div>-->
+<!--                                                <div class="cart-item__count">x2</p></div>-->
+<!--                                                <div class="cart-item__price">$999</div>-->
+<!--                                                <span class="cart-item__remove-item-btn">x</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+                                        <div class="cart-item__total">
+                                            <div class="cart-item__sub-total">
+                                                <span> Total:</span>
+                                                <strong></strong>
+                                            </div>
+                                            <div class="cart-item__buttons">
+                                                <a href="#" class="viewcart-btn"><span>view cart</span></a>
+                                                <a href="#" class="checkout-btn"><span>checkout</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--mega-menu-->
+            <div class="megamenu-background">
+                <div class="megamenu-wrapper">
+                    <div class="wrapper-col-3">
+                        <div class="container-megamenu">
+                            <div class="menu-heading-hover">
+                                <div class="heading">Categories Vertical <i class="fa fa-angle-down"></i></div>
+                            </div>
+                            <div class="vertical-menu">
+                                <div class="vertical-menu-content">
+                                    <ul class="drop-menu">
+                                        <li><a href="#">Man <span class="megamenu-label bg-red">NEW</span></a></li>
+                                        <li class="with-sub-menu">
+                                            <a href="#"><i class="fa fa-angle-right before-arrow"></i> Woman <i
+                                                    class="fa fa-angle-right after-arrow"></i></a>
+                                            <div class="sub-menu">
+                                                <div class="sub-menu-content">
+                                                    <ul class="ul-sub-menu">
+                                                        <li><a href="#">Shirt</a></li>
+                                                        <li class="with-sub-menu">
+                                                            <a href="#"><i class="fa fa-angle-right before-arrow"></i>Pants<i
+                                                                    class="fa fa-angle-right after-arrow"></i><span
+                                                                    class="megamenu-label bg-red"> NEW </span></a>
+                                                            <div class="sub-menu">
+                                                                <ul class="ul-sub-menu">
+                                                                    <li><a href="#">Long</a></li>
+                                                                    <li><a href="#">Short</a></li>
+                                                                    <li><a href="#">Medium</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="with-sub-menu">
+                                                            <a href="#"><i class="fa fa-angle-right before-arrow"></i>
+                                                                Jean <i class="fa fa-angle-right after-arrow"></i></a>
+                                                        </li>
+                                                        <li><a href="#">Shocks <span
+                                                                class="megamenu-label bg-blue">HOT</span></a></li>
+                                                        <li><a href="#">Hats</a></li>
+                                                        <li><a href="#">Accessories</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="with-sub-menu">
+                                            <a href="#"><i class="fa fa-angle-right before-arrow"></i> Accessories <span
+                                                    class="megamenu-label bg-blue">HOT</span><i
+                                                    class="fa fa-angle-right after-arrow"></i></a>
+                                            <div class="sub-menu" style="width: 795px; right: auto;">
+                                                <div class="sub-menu-content"
+                                                     style="background-image:url('http://fastortheme.com/default/image/catalog/bg-women.png');background-position: top right;background-repeat: no-repeat;margin:-15px 0;padding: 15px 0;">
+                                                    <div class="col-3">
+                                                        <ul class="ul-sub-menu">
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Pants <span class="megamenu-label bg-red">NEW</span></a>
+                                                            </li>
+                                                            <li><a href="#">Jean</a></li>
+                                                            <li><a href="#">Shocks <span class="megamenu-label bg-blue">HOT</span></a>
+                                                            </li>
+                                                            <li><a href="#">Hats</a></li>
+                                                            <li><a href="#">Accessories</a></li>
+                                                            <li><a href="#">Cameras</a></li>
+                                                            <li><a href="#">Softwares</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <div class="product">
+                                                            <div class="new megamenu-label bg-red">New</div>
+                                                            <div class="image">
+                                                                <a href="#"><img
+                                                                        src="http://fastortheme.com/default/image/catalog/megamenu-product.png"
+                                                                        alt="a"></a>
+                                                            </div>
+                                                            <div class="name"><a href="#">Apple cinama 30</a></div>
+                                                            <div class="price">$100.0</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">Lookbook</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrapper-col-9">
+                        <div class="container-megamenu2">
+                            <input type="checkbox" id="btn">
+                            <label for="btn" class="icon">
+                                <span>Navigation</span>
+                                <i class="fa fa-bars"></i>
+                                <i class="fa fa-times"></i>
+                            </label>
+
+                            <ul class="megamenu">
+                                <li class="with-sub-menu">
+                                    <input type="checkbox" id="drop-sub-menu-1">
+                                    <a href="#"><span><strong>Man <i class="fa fa-angle-down"></i><span
+                                            class="megamenu-label bg-red ">NEW</span></strong></span></a>
+                                    <label for="drop-sub-menu-1" class="icon plus-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </label>
+                                    <div class="drop-sub-menu">
+                                        <ul class="ul-sub-menu">
+                                            <li><a href="#">Shirt</a></li>
+                                            <li class="with-sub-menu">
+                                                <input type="checkbox" id="drop-sub-menu-1-1">
+                                                <a href="#"><i class="fa fa-angle-right before-arrow"></i> Pants <i
+                                                        class="fa fa-angle-right after-arrow"></i><span
+                                                        class="megamenu-label bg-red">NEW</span></a>
+                                                <label for="drop-sub-menu-1-1" class="icon plus-icon-sub-menu">
+                                                    <i class="fa fa-plus"></i>
+                                                </label>
+                                                <div class="right-sub-menu">
+                                                    <ul class="ul-sub-menu">
+                                                        <li><a href="#">Long</a></li>
+                                                        <li><a href="#">Short</a></li>
+                                                        <li><a href="#">Medium</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="with-sub-menu">
+                                                <input type="checkbox" id="drop-sub-menu-1-2">
+                                                <a href="#"><i class="fa fa-angle-right before-arrow"></i> Jeans <i
+                                                        class="fa fa-angle-right after-arrow"></i></a>
+                                                <label for="drop-sub-menu-1-2" class="icon plus-icon-sub-menu">
+                                                    <i class="fa fa-plus"></i>
+                                                </label>
+                                                <div class="right-sub-menu">
+                                                    <ul class="ul-sub-menu">
+                                                        <li><a href="#">Long</a></li>
+                                                        <li><a href="#">Short</a></li>
+                                                        <li><a href="#">Medium</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">Socks<span
+                                                    class="megamenu-label bg-blue">HOT</span></a></li>
+                                            <li><a href="#">Hats</a></li>
+                                            <li><a href="#">Accessories</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="with-sub-menu">
+                                    <input type="checkbox" id="drop-sub-menu-2">
+                                    <a href="#"><span><strong>Women <i
+                                            class="fa fa-angle-down"></i></strong></span></a>
+                                    <label for="drop-sub-menu-2" class="icon plus-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </label>
+                                    <div class="drop-sub-menu woman-sub-menu">
+                                        <ul class="ul-sub-menu">
+                                            <li><a href="#">Shirt</a></li>
+                                            <li><a href="#">Pants <span
+                                                    class="megamenu-label bg-red">NEW</span></a></li>
+                                            <li><a href="#">Jeans</a></li>
+                                            <li><a href="#">Socks<span
+                                                    class="megamenu-label bg-blue">HOT</span></a></li>
+                                            <li><a href="#">Hats</a></li>
+                                            <li><a href="#">Accessories</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="with-sub-menu position-static">
+                                    <input type="checkbox" id="drop-sub-menu-3">
+                                    <a href="#"><span><strong>Accessories <i class="fa fa-angle-down"></i><span
+                                            class="megamenu-label bg-blue">HOT</span></strong></span></a>
+                                    <label for="drop-sub-menu-3" class="icon plus-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </label>
+                                    <div class="drop-sub-menu accessories-sub-menu">
+                                        <div class="row">
+                                            <div class="column">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="title">Shirt</a>
+                                                        <div class="list">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">Pants</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Hats</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Accessories</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="column">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Jeans</a>
+                                                        <div class="list">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">Long</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Short</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Medium</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="column">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                        <div class="list">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">Hats</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Shirt</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">New</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <a href="#" style="height: auto"><img
+                                                    src="http://fastortheme.com/default/image/catalog/megamenu-banner.png"
+                                                    alt="a"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><span><strong>Lookbook</strong></span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span><strong>Contact<span></span></strong></span></a>
+                                </li>
+                                <li class="pull-right float-right">
+                                    <a href="#"><span><strong><i class="fa fa-heart"></i></strong></span></a>
+                                </li>
+                                <li class="pull-right float-right">
+                                    <a href="#"><span><strong>Blog</strong></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header-2 -->
+        <div class="header-slide">
+            <div class="carousel-container">
+                <a class="slick-arrow slick-prev">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <div class="slick-list">
+                    <div class="slick-track">
+                        <div class="slick-slide slick-clone">
+                            <a>
+                                <img src="img/slider-img-3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-slide slick-clone">
+                            <a>
+                                <img src="img/slider-img-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-slide slick-clone">
+                            <a>
+                                <img src="img/slider-img-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-slide slick-clone">
+                            <a>
+                                <img src="img/slider-img-3.png" alt="">
+                            </a>
+                        </div>
+                        <div id="firstClone" class="slick-slide slick-clone">
+                            <a>
+                                <img src="img/slider-img-1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="slick-arrow slick-next">
+                    <i class="fas fa-angle-right"></i>
+                </a>
+                <ul class="slick-dots">
+                    <li class="slick-active">
+                        <button>1</button>
+                    </li>
+                    <li class="">
+                        <button>2</button>
+                    </li>
+                    <li class="">
+                        <button>3</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- header-banner-->
+        <div class="bottom-header-banner">
+            <div class="wrapper-banner">
+                <div class="banner-col-1">
+                    <a href="#" class="hover-effect"><img src="img/banner-01.png" alt="banner-1"></a>
+                </div>
+                <div class="banner-col-1">
+                    <a href="#" class="hover-effect"><img src="img/banner-02.png" alt="banner-2"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!--    ===================main-content======================-->
+
+    <section>
+        <div class="section-rows-1">
+<!--    =====  carousel 1 ====-->
+            <div class="latest-product-row">
+                <div class="box-heading">Latest Product</div>
+                <div class="wrapper-carousel">
+                    <div class="border-top-bot"></div>
+                    <div class="carousel" id="carousel">
+<!--                        <div class="megamenu-label bg-red">New</div>-->
+                        <div class="carousel-box">
+                            <div class="carousel-items" id="carousel-items" >
+                                <div class="carousel-item" aria-haspopup="true">
+                                    <span class="new-item-label">new</span>
+                                    <div class="img-item"><img src="img/products/item1.jpg" alt="1"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 12 Pro Max</p>
+                                        <p class="price">$999</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <span class="new-item-label">new</span>
+                                    <div class="img-item"><img src="img/products/item2.jpg" alt="2"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 11 Pro Max</p>
+                                        <p class="price">$999</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="img-item"><img src="img/products/item3.jpg" alt="1"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 10 Pro Max</p>
+                                        <p class="price">$222</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" aria-haspopup="true">
+                                    <span class="new-item-label">new</span>
+                                    <div class="img-item"><img src="img/products/item4.jpg" alt="2"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 19 Pro Max</p>
+                                        <p class="price">$333</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="img-item"><img src="img/products/item5.jpg" alt="3"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 18 Pro Max</p>
+                                        <p class="price">$666</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="img-item"><img src="img/products/item6.jpg" alt="4"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 17 Pro Max</p>
+                                        <p class="price">$999</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="img-item"><img src="img/products/item7.jpg" alt="5"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 16 Pro Max</p>
+                                        <p class="price">$999</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="img-item"><img src="img/products/item8.jpg" alt="8"></div>
+                                    <div class="info-item">
+                                        <p class="product-name">Iphone 15 Pro Max</p>
+                                        <p class="price">$999</p>
+                                    </div>
+                                    <div class="hover-only">
+                                        <ul>
+                                            <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                            <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                            <li><a><i class="fas fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="prev-button"><i class="fa fa-angle-left"></i></a>
+                    <a class="next-button"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <!-- ===banner product row 1===-->
+            <div class="banner-product-row">
+                <div class="wrapper-banner">
+                    <div class="banner-col-1 col-3">
+                        <a href="#" class="hover-effect"><img src="img/banner/freeshipping.png" alt="banner-1"></a>
+                    </div>
+                    <div class="banner-col-1 col-6">
+                        <a href="#" class="hover-effect"><img src="img/banner/deal-30-forallbackpack.png" alt="banner-2"></a>
+                    </div>
+                    <div class="banner-col-1 col-3">
+                        <a href="#" class="hover-effect"><img src="img/banner/100moneyback.png" alt="banner-2"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categories-wall">
+                <div class="categories-wall-wrapper">
+                    <div class="col-4">
+                        <div class="category-wall">
+                            <div class="image"><img src="img/categories%20wall/category-wall-01.png" alt=""></div>
+                            <h2><a href="#">Men</a></h2>
+                            <ul>
+                                <li><a href="#">Outerwear</a></li>
+                                <li><a href="#">Blazers</a></li>
+                                <li><a href="#">Leather Jackets</a></li>
+                            </ul>
+                            <a href="#">More Categories</a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="category-wall">
+                            <div class="image"><img src="img/categories%20wall/category-wall-02.png" alt=""></div>
+                            <h2><a href="#">Woman</a></h2>
+                            <ul>
+                                <li><a href="#">Dresses</a></li>
+                                <li><a href="#">Maxi</a></li>
+                                <li><a href="#">OuterWear</a></li>
+                            </ul>
+                            <a href="#">More Categories</a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="category-wall">
+                            <div class="image"><img src="img/categories%20wall/category-wall-03.png" alt=""></div>
+                            <h2><a href="#">Accessories</a></h2>
+                            <ul>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Cases</a></li>
+                            </ul>
+                            <a href="#">More Categories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-product-row">
+                <div class="wrapper-banner">
+                    <div class="banner-col-1 col-6">
+                        <a href="#" class="hover-effect"><img src="img/banner/banner-06.png" alt="banner-2"></a>
+                    </div>
+                    <div class="banner-col-1 col-6">
+                        <a href="#" class="hover-effect"><img src="img/banner/banner-07.png" alt="banner-2"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-row-2">
+            <div class="col-3">
+                <div class="best-sellers">
+                    <div class="row">
+                        <h2 class="title">Bestsellers</h2>
+                        <div class="best-sellers-box">
+                            <div class="best-item">
+                                <div class="img">
+                                    <img src="img/products/item3.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <p><a href="#">Iphone X Pro</a></p>
+                                    <span>$1000</span>
+                                </div>
+                            </div>
+                            <div class="best-item">
+                                <div class="img">
+                                    <img src="img/products/item6.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <p><a href="#">Iphone XS Pro Max</a></p>
+                                    <span>$1000</span>
+                                </div>
+                            </div>
+                            <a class="prev-button"><i class="fa fa-angle-left"></i></a>
+                            <a class="next-button"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="banner">
+                            <a href="#" class="hover-effect"><img src="img/banner/banner-08.png" alt="banner-2"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="product-grid">
+                    <input type="radio" name="grid" id="men" checked >
+                    <input type="radio" name="grid" id="woman">
+                    <input type="radio" name="grid" id="accessories">
+                    <nav>
+                        <label for="men" class="men">Men</label>
+                        <label for="woman" class="woman">Woman</label>
+                        <label for="accessories" class="accessories">Accessories</label>
+                    </nav>
+                    <div class="content">
+                        <div class="carousel-items men-contents" >
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item6.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 12 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item4.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 11 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item2.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 10 Pro Max</p>
+                                    <p class="price">$222</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item3.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 19 Pro Max</p>
+                                    <p class="price">$333</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item5.jpg" alt="3"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 18 Pro Max</p>
+                                    <p class="price">$666</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item6.jpg" alt="4"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 17 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item7.jpg" alt="5"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 16 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item8.jpg" alt="8"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 15 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-items woman-contents">
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item1.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 12 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item2.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 11 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item3.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 10 Pro Max</p>
+                                    <p class="price">$222</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item4.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 19 Pro Max</p>
+                                    <p class="price">$333</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item5.jpg" alt="3"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 18 Pro Max</p>
+                                    <p class="price">$666</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item6.jpg" alt="4"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 17 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item7.jpg" alt="5"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 16 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item8.jpg" alt="8"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 15 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-items accessories-contents" >
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item1.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 12 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item2.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 11 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item3.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 10 Pro Max</p>
+                                    <p class="price">$222</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item4.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 19 Pro Max</p>
+                                    <p class="price">$333</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item5.jpg" alt="3"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 18 Pro Max</p>
+                                    <p class="price">$666</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item6.jpg" alt="4"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 17 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item7.jpg" alt="5"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 16 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item8.jpg" alt="8"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 15 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-row-3">
+            <div class="banner-big-sale">
+                <div class="banner-wrapper">
+                    <div class="col-12">
+                        <h2>Check all<br>products on SALE!</h2>
+                        <a href="#">Read More</a>
+                        <img src="img/banner/banner-big-sale.png" alt="BigSale">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="wrapper">
+                    <div class="box-heading">Featured</div>
+                    <div class="col-12">
+                        <div class="carousel-items">
+                            <div class="carousel-item">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item2.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 11 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item3.jpg" alt="1"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 10 Pro Max</p>
+                                    <p class="price">$222</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item" aria-haspopup="true">
+                                <span class="new-item-label">new</span>
+                                <div class="img-item"><img src="img/products/item4.jpg" alt="2"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 19 Pro Max</p>
+                                    <p class="price">$333</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item6.jpg" alt="4"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 17 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item7.jpg" alt="5"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 16 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-item"><img src="img/products/item8.jpg" alt="8"></div>
+                                <div class="info-item">
+                                    <p class="product-name">Iphone 15 Pro Max</p>
+                                    <p class="price">$999</p>
+                                </div>
+                                <div class="hover-only">
+                                    <ul>
+                                        <li class="add-to-cart-btn"><a><i class="fa fa-cart-plus"></i></a></li>
+                                        <li class="quick-view-btn"><a><i class="fa fa-search"></i></a></li>
+                                        <li><a><i class="fas fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="from-the-blog">
+                <div class="col-12">
+                    <div class="box-heading">From the blog</div>
+                    <div class="box-blog">
+                        <div class="col-3">
+                            <div class="content">
+                                <div class="thumb-img"><img src="img/imgblog/img-blog-1.jpg" alt=""></div>
+                                <div class="media-item">
+                                    <div class="tags">
+                                        <a href="#">fastor</a>
+                                        <a href="#">beautiful</a>
+                                    </div>
+                                    <div class="bots">
+                                        <div class="date-published">15.09.2015</div>
+                                        <h3>Donec ut nunc sit amet urna aliquet</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="content">
+                                <div class="thumb-img"><img src="img/imgblog/img-blog-2.jpg" alt=""></div>
+                                <div class="media-item">
+                                    <div class="tags">
+                                        <a href="#">fastor</a>
+                                        <a href="#">buy it</a>
+                                    </div>
+                                    <div class="bots">
+                                        <div class="date-published">04.08.2014</div>
+                                        <h3>Nulla distum consequat lorem ac vehicula</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="content">
+                                <div class="thumb-img"><img src="img/imgblog/img-blog-3.jpg" alt=""></div>
+                                <div class="media-item">
+                                    <div class="tags">
+                                        <a href="#">fastor</a>
+                                        <a href="#">passion</a>
+                                    </div>
+                                    <div class="bots">
+                                        <div class="date-published">12.09.2015</div>
+                                        <h3>Etiam ac aliquet ex nec volutpat orci</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="content">
+                                <div class="thumb-img"><img src="img/imgblog/img-blog-4.jpg" alt=""></div>
+                                <div class="media-item">
+                                    <div class="tags">
+                                        <a href="#">feature</a>
+                                        <a href="#">buy it</a>
+                                    </div>
+                                    <div class="bots">
+                                        <div class="date-published">06.09.2015</div>
+                                        <h3>Subpendisse dolor purus, leoreet nec</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============modal===============-->
+        <div class="section-modal">
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <span class="modal__close-btn"><i class="fa fa-times"></i></span>
+                    <div class="modal__content">
+                        <div class="modal__image"><img src="img/products/item-quickview1.jpg" alt=""></div>
+                        <div class="modal__details">
+                            <div class="modal__details-row">
+                                <p class="modal__title">Iphone 12 Pro Max Plus</p>
+                                <div class="modal__review">
+                                    <a class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </a>
+                                    <a href="#"><span>0 reviews</span></a>
+                                    <a href="#"><span>Write a review</span></a>
+                                </div>
+                            </div>
+                            <div class="modal__details-row">
+                                <div class="modal__info">
+                                    <span>Brand:</span>Hewlett-Packard<br>
+                                    <span>Product Code:</span>Product 21<br>
+                                    <span>Reward Points:</span>200<br>
+                                    <span>Availability:</span>In Stock
+                                </div>
+                            </div>
+                            <div class="modal__details-row">
+                                <div class="modal__price">
+                                    <p><strong>$1000</strong></p>
+                                    <p>Ex Tax: $1000</p>
+                                    <span>Price in reward points: 400</span>
+                                </div>
+                            </div>
+                            <div class="modal__details-row">
+                                <div class="modal__add-to-cart">
+                                    <div class="modal__cart-btn">
+                                        <span class="modal__add">Add to cart</span>
+                                    </div>
+                                    <div class="modal__other-btn">
+                                        <a href="#"><span>Add to wish list</span></a>
+                                        <a href="#"><span>Compare this product</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="background-footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-blocks-top">
+                        <div class="col-4">
+                            <div class="footer-block">
+                                <img src="img/footer/icon-mail.png" alt="mail">
+                                <div class="footer-block-content">
+                                    <h3>Do you have any question?</h3>
+                                    <p>email.example@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-block">
+                                <img src="img/footer/icon-phone.png" alt="">
+                                <div class="footer-block-content">
+                                    <h3>800-140-100</h3>
+                                    <p>Mon - Fri: 8:00 - 17:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-block">
+                                <a href="#">Contact form</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-row clear-both">
+                    <div class="col-3">
+                        <div class="footer-about-us">
+                            <img src="img/footer/logo-footer.png" alt="">
+                            <h3>PO Box 16122 Collins Street <br>Victoria 8007 Australia</h3>
+                            <p>(+800) 1234 5678 90<br>info@company.com</p>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h4>Custom block</h4>
+                        <div class="strip-line">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Delivery information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Site map</a></li>
+                                <li><a href="#">Brands</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h4>Put here</h4>
+                        <div class="strip-line">
+                            <ul>
+                                <li><a href="#">My account</a></li>
+                                <li><a href="#">Order History</a></li>
+                                <li><a href="#">Wish List</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h4>What you want</h4>
+                        <div class="advance-grid-product">
+                            <div class="clear-fix product">
+                                <div class="image">
+                                    <a href="#"><img src="img/products/item3.jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <a href="#">Samsung Galaxy Tab 10.1</a>
+                                    <p>$900</p>
+                                </div>
+                            </div>
+                            <div class="clear-fix product">
+                                <div class="image">
+                                    <a href="#"><img src="img/products/item6.jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <a href="#">iphone Galaxy Pro</a>
+                                    <p>$1900</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-row">
+                    <div class="footer-blocks-top">
+                        <div class="col-4">
+                            <div class="footer-block">
+                                <img src="img/footer/icon-free-shipping.png" alt="mail">
+                                <div class="footer-block-content pd-top-0">
+                                    <h3>Do you have any question?</h3>
+                                    <p>email.example@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-block">
+                                <img src="img/footer/icon-money-back.png" alt="">
+                                <div class="footer-block-content pd-top-0">
+                                    <h3>800-140-100</h3>
+                                    <p>Mon - Fri: 8:00 - 17:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-block">
+                                <img src="img/footer/icon-support.png" alt="">
+                                <div class="footer-block-content pd-top-0">
+                                    <h3>800-140-100</h3>
+                                    <p>Mon - Fri: 8:00 - 17:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-row">
+                    <div class="copy-right">
+                        <div style="text-align: center">Copyright © 2015, Your Store, All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/script.js"></script>
+<script src="js/carousel.js"></script>
+</body>
+</html>
