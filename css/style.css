@@ -407,7 +407,7 @@ img {
 .header-full-width .megamenu-background {
     position: relative;
     border-bottom: 2px solid #d9121f;
-    background: url(../img/background/bg-footer.png) top left repeat-x;
+    background: url(../img/background/bg-1px.png) top left repeat-x;
 }
 
 .header-full-width .megamenu-background .megamenu-wrapper {
@@ -426,7 +426,7 @@ img {
 .megamenu-wrapper .wrapper-col-3 .container-megamenu {
     position: relative;
     margin-left: -45px;
-    background: url(../img/background/bg-footer.png) top right repeat-y;
+    background: url(../img/background/bg-1px.png) top right repeat-y;
 }
 
 .wrapper-col-3 .container-megamenu .menu-heading-hover {
@@ -624,7 +624,7 @@ img {
 }
 
 .sub-menu .sub-menu-content .ul-sub-menu li:not(:last-child) {
-    background: url(../img/background/bg-footer.png) bottom left repeat-x;
+    background: url(../img/background/bg-1px.png) bottom left repeat-x;
 }
 
 /*menu-right*/
@@ -956,7 +956,7 @@ section {
     /*border-top: 1px solid;*/
     display: block;
     z-index: 1;
-    background: url(../img/background/bg-footer.png) top left repeat-x;
+    background: url(../img/background/bg-1px.png) top left repeat-x;
 }
 .border-top-bot::after {
     position: absolute;
@@ -968,7 +968,7 @@ section {
     /*border-top: 1px solid;*/
     display: block;
     z-index: 1;
-    background: url(../img/background/bg-footer.png) top left repeat-x;
+    background: url(../img/background/bg-1px.png) top left repeat-x;
 }
 .carousel-items .carousel-item {
     position: relative;
@@ -979,11 +979,10 @@ section {
     position: absolute;
     content: '';
     width: 1px;
-    right: 0;
+    right: 1px;
     top: 0;
     bottom: 0;
-    z-index: 1;
-    background: url(../img/background/bg-footer.png) top right repeat-y;
+    background: url(../img/background/bg-1px.png) left top repeat-y;
 }
 .carousel-items .carousel-item .new-item-label {
     position: absolute;
