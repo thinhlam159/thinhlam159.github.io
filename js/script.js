@@ -54,6 +54,13 @@ addToCartButton.forEach(element => {
         console.log(src+productName+price)
     })
 });
+// hidden cart-block
+// let cartBlock = document.querySelector('#cart-block .dropdown-menu');
+// cartBlock.onclick = function (e) {
+//     // e.currentTarget.style.
+//     e.currentTarget.style.opacity = '0';
+//     e.currentTarget.style.visibility = 'visible';
+// }
 
 function addToCart(img, name, price) {
     console.log(name);
@@ -92,6 +99,7 @@ function addToCart(img, name, price) {
         updateCart();
     });
 }
+
 
 // =================modal====================
 const quickViewBtn = document.querySelectorAll('.quick-view-btn');

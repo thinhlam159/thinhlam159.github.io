@@ -147,18 +147,28 @@ function touch_slide(wrapper, items, prev, next) {
         index = 0,
         allowShift = true,
         itemShow = 4;
-    window.onresize = function() {
-        if(htmlRoot.offsetWidth < 600) {
-            itemShow = 2;
-            carouselBox.style.width = '400%';
-            console.log('width 400')
+    if(htmlRoot.offsetWidth < 600) {
+        itemShow = 2;
+        carouselBox.style.width = '400%';
+        console.log('width 400')
 
-        } else {
-            itemShow = 4;
-            carouselBox.style.width = '200%';
-            console.log('width 200')
-        }
-    };
+    } else {
+        itemShow = 4;
+        carouselBox.style.width = '200%';
+        console.log('width 200')
+    }
+    // window.onresize = function() {
+    //     if(htmlRoot.offsetWidth < 600) {
+    //         itemShow = 2;
+    //         carouselBox.style.width = '400%';
+    //         console.log('width 400')
+    //
+    //     } else {
+    //         itemShow = 4;
+    //         carouselBox.style.width = '200%';
+    //         console.log('width 200')
+    //     }
+    // };
 
     // Mouse and touch events
     items.onmousedown = dragStart;
