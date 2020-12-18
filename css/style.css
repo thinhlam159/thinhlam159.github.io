@@ -2054,7 +2054,7 @@ footer a:hover {
 @media screen and (max-width: 800px) {
     .main {
         width: 100%;
-        padding: 0 10px;
+        padding: 0;
         min-width: 320px;
     }
 
@@ -2134,8 +2134,44 @@ footer a:hover {
     .section-row-2 .col-9 .carousel-items {
         grid-template-columns: repeat(2, 50%);
     }
-
 }
-
+@media screen and (max-width: 600px) {
+    section {
+        padding: 0;
+    }
+    .hover-only ul li {
+        width: 35px;
+        height: 35px;
+    }
+    .hover-only ul li a {
+        line-height: 35px;
+    }
+    .from-the-blog .col-12 {
+        padding: 0;
+    }
+    .box-blog .col-3 {
+        padding: 0 5px 5px 10px;
+    }
+    .feature-box .wrapper .col-12 .carousel-items .carousel-item {
+        padding: 40px 15px 20px 15px;
+    }
+    .feature-box .wrapper .col-12 .carousel-items .carousel-item:nth-child(1),
+    .feature-box .wrapper .col-12 .carousel-items .carousel-item:nth-child(2),
+    .feature-box .wrapper .col-12 .carousel-items .carousel-item:nth-child(3) {
+        border-bottom: 1px solid #d9d9d9;
+    }
+    .section-row-2 {
+        margin: 0;
+    }
+    .footer-container {
+        padding: 0 10px;
+    }
+    .footer-row .col-3:nth-child(2n+1) {
+        padding: 28px 7px 30px 15px;
+    }
+    .footer-row .col-3:nth-child(2n) {
+        padding: 28px 10px 30px 7px;
+    }
+}
 
 

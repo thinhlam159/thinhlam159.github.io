@@ -7,7 +7,6 @@
     <title>Ecommerce-project</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
-    <!-- <js src="https://kit.fontawesome.com/d076a05399.js"></js> -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
@@ -27,7 +26,7 @@
                                 </div>
                                 <input type="text" class="input-block-level search-query" name="search"
                                        placeholder="Search" id="search_query" value="" autocomplete="off"
-                                       >
+                                >
                             </div>
                             <!-- currency_form -->
                             <form action="" id="currency-form">
@@ -35,15 +34,15 @@
                                     <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">$<i
                                             class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="javascript:;"
-                                               onclick="$('input[name=\'code\']').attr('value', 'EUR'); $('#currency_form').submit();">Euro</a>
+                                        <li>
+                                            <a>Euro</a>
                                         </li>
-                                        <li><a href="javascript:;"
-                                               onclick="$('input[name=\'code\']').attr('value', 'GBP'); $('#currency_form').submit();">Pound
-                                            Sterling</a></li>
-                                        <li><a href="javascript:;"
-                                               onclick="$('input[name=\'code\']').attr('value', 'USD'); $('#currency_form').submit();">US
-                                            Dollar</a></li>
+                                        <li>
+                                            <a>Pound Sterling</a>
+                                        </li>
+                                        <li>
+                                            <a>US Dollar</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </form>
@@ -92,15 +91,15 @@
                                 <div id="cart_contents">
                                     <div class="empty">Your shopping cart is empty!</div>
                                     <div class="cart-items">
-<!--                                        <div class="cart-item">-->
-<!--                                            <div class="cart-item__row">-->
-<!--                                                <img src="img/products/item1.jpg" alt="a">-->
-<!--                                                <div class="title">Iphone 12 pro max</div>-->
-<!--                                                <div class="cart-item__count">x2</p></div>-->
-<!--                                                <div class="cart-item__price">$999</div>-->
-<!--                                                <span class="cart-item__remove-item-btn">x</span>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
+                                        <!--                                        <div class="cart-item">-->
+                                        <!--                                            <div class="cart-item__row">-->
+                                        <!--                                                <img src="img/products/item1.jpg" alt="a">-->
+                                        <!--                                                <div class="title">Iphone 12 pro max</div>-->
+                                        <!--                                                <div class="cart-item__count">x2</p></div>-->
+                                        <!--                                                <div class="cart-item__price">$999</div>-->
+                                        <!--                                                <span class="cart-item__remove-item-btn">x</span>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
                                         <div class="cart-item__total">
                                             <div class="cart-item__sub-total">
                                                 <span> Total:</span>
@@ -388,7 +387,7 @@
                 </a>
                 <div class="slick-list">
                     <div class="slick-track">
-                        <div class="slick-slide slick-clone">
+                        <div id="lastClone" class="slick-slide slick-clone">
                             <a>
                                 <img src="img/slider-img-3.png" alt="">
                             </a>
@@ -445,19 +444,19 @@
         </div>
     </header>
 
-<!--    ===================main-content======================-->
+    <!--    ===================main-content======================-->
 
     <section>
         <div class="section-rows-1">
-<!--    =====  carousel 1 ====-->
+            <!--    =====  carousel 1 ====-->
             <div class="latest-product-row">
                 <div class="box-heading">Latest Product</div>
                 <div class="wrapper-carousel">
                     <div class="border-top-bot"></div>
                     <div class="carousel" id="carousel">
-<!--                        <div class="megamenu-label bg-red">New</div>-->
+                        <!--                        <div class="megamenu-label bg-red">New</div>-->
                         <div class="carousel-box">
-                            <div class="carousel-items" id="carousel-items" >
+                            <div class="carousel-items" id="carousel-items">
                                 <div class="carousel-item" aria-haspopup="true">
                                     <span class="new-item-label">new</span>
                                     <div class="img-item"><img src="img/products/item1.jpg" alt="1"></div>
@@ -588,7 +587,8 @@
                         <a href="#" class="hover-effect"><img src="img/banner/freeshipping.png" alt="banner-1"></a>
                     </div>
                     <div class="banner-col-1 col-6">
-                        <a href="#" class="hover-effect"><img src="img/banner/deal-30-forallbackpack.png" alt="banner-2"></a>
+                        <a href="#" class="hover-effect"><img src="img/banner/deal-30-forallbackpack.png"
+                                                              alt="banner-2"></a>
                     </div>
                     <div class="banner-col-1 col-3">
                         <a href="#" class="hover-effect"><img src="img/banner/100moneyback.png" alt="banner-2"></a>
@@ -685,7 +685,7 @@
             </div>
             <div class="col-9">
                 <div class="product-grid">
-                    <input type="radio" name="grid" id="men" checked >
+                    <input type="radio" name="grid" id="men" checked>
                     <input type="radio" name="grid" id="woman">
                     <input type="radio" name="grid" id="accessories">
                     <nav>
@@ -694,7 +694,7 @@
                         <label for="accessories" class="accessories">Accessories</label>
                     </nav>
                     <div class="content">
-                        <div class="carousel-items men-contents" >
+                        <div class="carousel-items men-contents">
                             <div class="carousel-item" aria-haspopup="true">
                                 <span class="new-item-label">new</span>
                                 <div class="img-item"><img src="img/products/item6.jpg" alt="1"></div>
@@ -928,7 +928,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-items accessories-contents" >
+                        <div class="carousel-items accessories-contents">
                             <div class="carousel-item" aria-haspopup="true">
                                 <span class="new-item-label">new</span>
                                 <div class="img-item"><img src="img/products/item1.jpg" alt="1"></div>

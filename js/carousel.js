@@ -7,14 +7,14 @@ const btn = document.querySelectorAll('.slick-dots button');
 
 let eleIsClicked = 0;
 let size = slickSlice[0].clientWidth;
-let count = 1, time = 2000;
+let count = 1, time = 3000;
 let stateTab = true;
 let stateTranslateOfSlickTrack = true;
 let v_interval = '';
 
 let hidden, visibilityChange;
 run_setInterval();
-
+console.log(slickDots)
 //tao ham run setInterval va run clearInterval
 function run_setInterval() {
     v_interval = setInterval(() => {
@@ -22,11 +22,12 @@ function run_setInterval() {
         slickDots[count-1].classList.remove('slick-active');
         slickTrack.style.transition = 'transform .5s ease-in-out';
         slickTrack.style.transform = `translate3d(${-size*(++count)}px,0px,0px)`;
+        // console.log(count)
         eleIsClicked = count -1;
         if(count === slickSlice.length -1 ) {
             slickDots[0].classList.add('slick-active')
         } else {
-            slickDots[count -1].classList.add('slick-active')
+            slickDots[count -1].classList.add('slick-active');
         }
         // console.log('interval '+ count)
     }, time)
@@ -80,13 +81,11 @@ function commonFuncBothArrows(arrowL, arrowR, e) {
             if(count >= slickSlice.length - 1){ return;}
         }
     }
-    console.log(count + ' count');
     slickDots[count - 1].classList.remove('slick-active');
     slickTrack.style.transition = 'transform 0.5s ease-in-out';
     count = arrowL ? --count : ++count;
     slickTrack.style.transform = `translate3d(${-size*count}px, 0px, 0px)`;
     eleIsClicked = count -1;
-    console.log(count + ' count');
     switch (count) {
         case 0:
             slickDots[slickDots.length - 1].classList.add('slick-active');
@@ -132,6 +131,7 @@ const carousel = document.querySelector('.carousel');
 const carouselBox = document.querySelector('.carousel-items');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
+const htmlRoot = document.getElementsByTagName('html')[0];
 // event.stopPropagation();
 touch_slide(carousel, carouselBox, prevButton, nextButton);
 
@@ -145,7 +145,20 @@ function touch_slide(wrapper, items, prev, next) {
         slideLength = slides.length,
         slideSize = document.querySelectorAll('.carousel-item')[0].offsetWidth,
         index = 0,
-        allowShift = true;
+        allowShift = true,
+        itemShow = 4;
+    window.onresize = function() {
+        if(htmlRoot.offsetWidth < 600) {
+            itemShow = 2;
+            carouselBox.style.width = '400%';
+            console.log('width 400')
+
+        } else {
+            itemShow = 4;
+            carouselBox.style.width = '200%';
+            console.log('width 200')
+        }
+    };
 
     // Mouse and touch events
     items.onmousedown = dragStart;
@@ -213,18 +226,42 @@ function touch_slide(wrapper, items, prev, next) {
     function shiftSlide(dir, action) {
         slideSize = document.querySelectorAll('.carousel-item')[0].offsetWidth;
         items.classList.add('shifting');
+        console.log('hahhaha')
         if(!action) {
             posInitial = items.offsetLeft
         }
         if(dir === 1) {
-            items.style.left = -(slideSize*4 -2) + 'px';
+            if (itemShow === 2) {
+                if (index < 3) {
+                    index +=1;
+                    items.style.left = -(slideSize*itemShow*index -2) + 'px';
+                } else {
+                    index = 3;
+                    items.style.left = -(slideSize*itemShow*index -2) + 'px';
+                }
+            } else if (itemShow === 4) {
+                if (index < 1) {
+                    index +=1;
+                    items.style.left = -(slideSize*itemShow*index -2) + 'px';
+                } else {
+                    index = 1;
+                    items.style.left = -(slideSize*itemShow*index -2) + 'px';
+                }
+            }
         } else if(dir === -1) {
-            items.style.left = '0px';
+            if (index > 0) {
+                index -=1;
+                items.style.left = -(slideSize*itemShow*index -2) + 'px';
+            } else {
+                index = 0;
+                items.style.left = -(slideSize*itemShow*index -2) + 'px';
+            }
         }
         allowShift = false
     }
     function checkIndex(event) {
         event.target.classList.remove('shifting');
+
         allowShift = true;
     }
 }
