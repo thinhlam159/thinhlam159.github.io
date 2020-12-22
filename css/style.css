@@ -1603,6 +1603,78 @@ input[type='radio'] {
     border-left: 1px solid #d9d9d9;
 }
 /*===================end-section-modal====================*/
+
+/*-----toast-------*/
+
+#toast {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 99;
+}
+.toast {
+    display: flex;
+    min-width: 340px;
+    justify-content: space-between;
+    border-left: 4px solid;
+    border-radius: 2px;
+    align-items: center;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.15);
+    background: #fff;
+    padding: 5px 0;
+    transition: all .3s ease;
+}
+.toast + .toast {
+    margin-top: 10px;
+}
+.toast--success {
+    border-color: #28a745;;
+}
+.toast--success .toast__title,
+.toast--success .toast__icon {
+    color: #28a745;
+}
+@keyframes showFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 20px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.toast__icon {
+    font-size: 20px;
+}
+.toast__icon,
+.toast__close {
+    padding: 0 10px;
+}
+.toast__body {
+    flex-grow: 1;
+}
+.toast__close {
+    color: #d9d9d9;
+    font-size: 24px;
+}
+.toast__close:hover {
+    color: rgba(217,39,31,0.7);
+}
+.toast__title {
+    color: #333;
+}
+.toast__message {
+font-size: 12px;
+}
 /*==============section row 1==========================*/
 .banner-product-row {
     /*padding: 40px;*/
@@ -2197,6 +2269,9 @@ footer a:hover {
     }
     #cart_content .cart-item__total .cart-item__buttons a {
         padding: 10px 30px;
+    }
+    .toast {
+        min-width: 280px;
     }
 }
 

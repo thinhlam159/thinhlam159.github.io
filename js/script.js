@@ -51,7 +51,9 @@ addToCartButton.forEach(element => {
         let price = product.querySelector('.price').textContent;
         addToCart(src, productName, price);
         updateCart();
-        console.log(src+productName+price)
+        //toast
+        toast();
+
     })
 });
 // hidden cart-block
@@ -61,6 +63,29 @@ addToCartButton.forEach(element => {
 //     e.currentTarget.style.opacity = '0';
 //     e.currentTarget.style.visibility = 'visible';
 // }
+function toast() {
+    const toasts = document.querySelector('#toast');
+    const toast = document.createElement('div');
+    toast.classList.add('toast', 'toast--success');
+    toast.innerHTML = `<div class="toast__icon"><i class="fas fa-check-circle"></i></div>
+                       <div class="toast__body">
+                            <h3 class="toast__title">Success</h3>
+                            <p class="toast__message">Addition 1 item to shopping cart</p>
+                       </div>
+                       <div class="toast__close"><i class="fas fa-times"></i></div>`;
+    toast.style.animation = `showFromRight .6s ease, fadeOut 1s ease 2s forwards`;
+    toasts.appendChild(toast);
+
+    //remove toast
+    const duration = setTimeout(() => {
+        toast.remove()
+    }, 3000)
+    const closeBtn = toast.querySelector('.toast__close');
+    closeBtn.onclick = function (e) {
+        e.target.closest('.toast').remove();
+        clearTimeout(duration)
+    }
+}
 
 function addToCart(img, name, price) {
     console.log(name);
@@ -104,16 +129,81 @@ function addToCart(img, name, price) {
 // =================modal====================
 const quickViewBtn = document.querySelectorAll('.quick-view-btn');
 const modalSection = document.querySelector('.section-modal');
-const closeModalBtn = modalSection.querySelector('.modal__close-btn');
 const modalBg = modalSection.querySelector('.modal');
+const modalWrapper = document.querySelector('.modal__wrapper');
 quickViewBtn.forEach(element => {
-    element.addEventListener('click', function () {
+    element.addEventListener('click', function (e) {
         modalSection.className += ' active';
+        const parentNode = e.target.closest('.carousel-item')
+        const nameProduct = parentNode.querySelector('.product-name').textContent;
+        let html = '';
+
+        fetch('https://lamvietthinh-ef5d9.firebaseio.com/data.json')
+            .then(response => response.json())
+            .then(data => {
+                let infoProduct;
+                for (let dataItem in data) {
+                    // console.log(data[dataItem].name)
+                    if(data[dataItem].name === nameProduct) {
+                        infoProduct = data[dataItem];
+                    }
+                }
+                html = `<span class="modal__close-btn"><i class="fa fa-times"></i></span>
+                        <div class="modal__content">
+                            <div class="modal__image"><img src="${infoProduct.image.img1.bigImg}" alt=""></div>
+                            <div class="modal__details">
+                            <div class="modal__details-row">
+                                <p class="modal__title">${infoProduct.name}</p>
+                                <div class="modal__review">
+                                    <a class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </a>
+                                    <a href="#"><span>0 reviews</span></a>
+                                    <a href="#"><span>Write a review</span></a>
+                                </div>
+                            </div>
+                            <div class="modal__details-row">
+                                <div class="modal__info">
+                                    <span>Brand:</span>${infoProduct.brand}<br>
+                                    <span>Product Code:</span>${infoProduct.productCode}<br>
+                                    <span>Reward Points:</span>${infoProduct.rewardPoints}<br>
+                                    <span>Availability:</span>${infoProduct.availability}
+                                </div>
+                            </div>
+                            <div class="modal__details-row">
+                                <div class="modal__price">
+                                    <p><strong>\$${infoProduct.price}</strong></p>
+                                    <p>Ex Tax: \$${infoProduct.price}</p>
+                                    <span>Price in reward points: 400</span>
+                                </div>
+                            </div>
+                            <div class="modal__details-row">
+                                <div class="modal__add-to-cart">
+                                    <div class="modal__cart-btn">
+                                        <span class="modal__add">Add to cart</span>
+                                    </div>
+                                    <div class="modal__other-btn">
+                                        <a href="#"><span>Add to wish list</span></a>
+                                        <a href="#"><span>Compare this product</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                modalWrapper.innerHTML = html;
+
+                const closeModalBtn = modalSection.querySelector('.modal__close-btn');
+                closeModalBtn.onclick = function () {
+                    modalSection.classList.remove('active');
+                };
+            })
     })
 });
-closeModalBtn.onclick = function () {
-    modalSection.classList.remove('active');
-};
+
 // modalSection.addEventListener('click', function (event) {
 //     event.target.classList.remove('active');
 // });
